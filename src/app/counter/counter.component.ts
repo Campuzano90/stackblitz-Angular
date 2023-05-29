@@ -8,4 +8,14 @@ import { Component } from '@angular/core';
   <button (click)="resetCounter()">Reset</button>
   <button (click)="increaseBy(-1)">-1</button>'`,
 })
-export class CounterComponent {}
+export class CounterComponent {
+  public title: string = 'Mi primera app en Angular';
+  public counter: number = 0;
+
+  increaseBy(value: number): void {
+    this.counter += value;
+  }
+  resetCounter(): void {
+    this.counter = 0;
+  }
+}
